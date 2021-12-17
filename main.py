@@ -62,6 +62,7 @@ class MenuWindow(QDialog):
 
     def ationCompletedTableButton(self):
         self.close()
+        completedtable_8.actionRefreshButton()
         completedtable_8.show()
 
     def ationCrimeTableButton(self):
@@ -155,7 +156,7 @@ class CrimeTableWindow(QDialog):
 
         self.cursor = self.connect.cursor()
         query = "SELECT * FROM `crimetable`"
-        self.this_window.tableWidget.setRowCount(counter_rows_crimeTable)
+        self.this_window.tableWidget.setRowCount(15)#counter_rows_crimeTable
         self.cursor.execute(query)
         rows = self.cursor.fetchall()
         self.forQuery(rows)
@@ -295,7 +296,7 @@ class CrimeTableWindow(QDialog):
     def actionRefreshButton(self):
         self.cursor = self.connect.cursor()
         query = "SELECT * FROM `crimetable`"
-        self.this_window.tableWidget.setRowCount(counter_rows_crimeTable)
+        self.this_window.tableWidget.setRowCount(15)#counter_rows_crimeTable
         self.cursor.execute(query)
         rows = self.cursor.fetchall()
         self.forQuery(rows)
@@ -601,7 +602,15 @@ class CompletedTableWindow(QDialog):
     def actionRefreshButton(self):
         self.cursor = self.connect.cursor()
         query = "SELECT * FROM `completedtable`"
-        self.this_window.tableWidget.setRowCount(10) #counter_rows_completedTable
+        self.this_window.tableWidget.setRowCount(10)  # counter_rows_completedTable
+        self.cursor.execute(query)
+        rows = self.cursor.fetchall()
+        self.forQuery(rows)
+
+    def refreshTable(self):
+        self.cursor = self.connect.cursor()
+        query = "SELECT * FROM `completedtable`"
+        self.this_window.tableWidget.setRowCount(10)  # counter_rows_completedTable
         self.cursor.execute(query)
         rows = self.cursor.fetchall()
         self.forQuery(rows)

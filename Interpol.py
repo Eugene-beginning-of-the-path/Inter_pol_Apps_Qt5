@@ -114,7 +114,9 @@ class Ui_Dialog(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">In 1914, with the active participation of Prince Albert I of Monaco, the 1st International Criminal Police Congress was held in the Principality, which was attended by police officers from 14 countries (including the Russian Empire). The Congress approved the initiative to create an international criminal police commission, but the First World War prevented the execution of plans.</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">The re-establishment of Interpol took place only in 1946 with the relocation of the headquarters to Paris. The current charter was adopted in 1956. He also approved the new name of the organization - &quot;International Criminal Police Organization — Interpol&quot;.</p></body></html>"))
-
+        self.textEdit.setReadOnly(True)
+        self.textEdit_2.setReadOnly(True)
+        self.textEdit_3.setReadOnly(True)
 
 if __name__ == "__main__":
     import sys
